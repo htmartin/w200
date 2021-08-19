@@ -1,23 +1,27 @@
 ### Q3-1 Grading Tag: Please put your entire solution in this cell. Don't edit this line.
 
+
+###This is working program before I started on n nps.
+
+
+
 # script that allows user to input name
+
 #name = 'Joe Blow'
 name = input('Please enter your name:')
-
 # split the resulting string to create a list of the name parts.
 list_name = list(name.split())
 
 # iterate over list_name
+#     for each name part(np)
+#         uncap the start letter
+#add resulting nps to new list lower_list_name
 
-#add resulting nps to new list lower_list_name, pt 1
 lower_list_name=[]
 
-#for each name part(np)
 for i in list_name:
     
-#uncap the start letter
     np=i.lower()
-    #add resulting nps to new list lower_list_name, pt 2
     lower_list_name.append(np)
             # iterate over np strings
 #         move the start letter to the end of the name part
