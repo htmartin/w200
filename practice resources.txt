@@ -1,10 +1,10 @@
-practice resources
+#practice resources
 
 https://www.practicepython.org/
 
 https://www.w3resource.com/python-exercises/
 
-Projects
+#Projects
 
 just gives code:
 https://hackr.io/blog/python-projects
