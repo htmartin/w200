@@ -1,6 +1,0 @@
-stuff wemissed:
-
-Week 3
-
-
-- book: Things to do (dicts)
