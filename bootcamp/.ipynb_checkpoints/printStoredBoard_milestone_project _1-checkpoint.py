@@ -9,7 +9,6 @@ board_dict = {1:1, 2:2, 3:3,4:4, 5:5, 6:6, 7:7, 8:8, 9:9}
 
 def printBoard_original():   
     board_list = list(board_dict.values())
-    print(board_list)
     
     print ( "     |     |   ")
     print (" ",board_list[0]," | ", board_list[1], " | ", board_list[2],"  ")
@@ -49,9 +48,24 @@ def printBoard_turn():
     
     
 while True:
-p= input('Are you player X or player O? Enter x or o:')
-print('Ready Player',p, ". Here's the current state of the game:\n")
-print(printBoard_original())
-n = int(input('Where do you want to play next? Enter a position number from 1-9 to place your mark?'))
-#update board_dict with appropriate n:p pair before we call printBoard_turn
-print(printBoard_turn())
+    p= input('Are you player X or player O? Enter x or o:')
+    print('Ready Player',p, ". Here's the current state of the game:\n")
+    # print(printBoard_original())
+    n = int(input('Where do you want to play next? Enter a position number from 1-9 to         place your mark?'))
+    board_dict[n]= p
+    #update board_dict with appropriate n:p pair before we call printBoard_turn
+    print(board_dict)
+
+Gives:
+Are you player X or player O? Enter x or o: x
+Ready Player x . Here's the current state of the game:
+
+Where do you want to play next? Enter a position number from 1-9 to place your mark? 3
+{1: 1, 2: 'o', 3: 'x', 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 'o'}
+Are you player X or player O? Enter x or o: o
+Ready Player o . Here's the current state of the game:
+
+Where do you want to play next? Enter a position number from 1-9 to place your mark? 8
+{1: 1, 2: 'o', 3: 'x', 4: 4, 5: 5, 6: 6, 7: 7, 8: 'o', 9: 'o'}
+
+#Integrate update board_dict back in with functions so printing board matching board_dict each move

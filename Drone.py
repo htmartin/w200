@@ -83,6 +83,7 @@ print('d2 ascend count is',d2.ascend_count)
 #Counting with data attributes 2: Class attributes
 class Drone:
     '''rep of a drone aircraft'''
+    
     num_drones =0
     power_system ='battery'
     
@@ -102,3 +103,71 @@ d = Drone(100)
 d.fly()
 d2 = Drone()
 print('There are',Drone.num_drones, 'drones')
+
+#_______________________________7.10 Controlling Access to Attributes:getters and setters
+class Drone:
+    '''rep of a drone aircraft'''
+    
+    num_drones =0
+    
+    
+    def __init__(self,altitude=0):
+        self.altitude = altitude
+        self.ascend_count = 0
+        Drone.num_drones +=1
+    
+    def fly(self):
+        print ('The drone is flying at an altitude of '+ str(self.altitude))
+    
+    def ascend(self, change):
+        self.altitude += change
+        self.ascend_count += 1
+    
+    def get_altitude(self):
+        return self.altitude
+
+    
+    def set_altitude(self, new_altitude):
+        self.altitude = new_altitude
+        
+
+
+d1 = Drone(100)
+print("The drone's altitude is", d1.get_altitude())
+
+d1.set_altitude = 300
+print("The drone's altitude is", d1.get_altitude())
+
+#_______________________________7.10 Controlling Access to Attributes:getters and setters 2
+class Drone:
+    '''rep of a drone aircraft'''
+    
+    num_drones =0
+    
+    
+    def __init__(self,altitude=0):
+        self.altitude = altitude
+        self.ascend_count = 0
+        Drone.num_drones +=1
+    
+    def fly(self):
+        print ('The drone is flying at an altitude of '+ str(self.altitude))
+    
+    def ascend(self, change):
+        self.altitude += change
+        self.ascend_count += 1
+    
+    def get_altitude(self):
+        return self.altitude
+
+    
+    def set_altitude(self, new_altitude):
+        self.altitude = new_altitude
+        
+
+
+d1 = Drone(100)
+print("The drone's altitude is", d1.get_altitude())
+
+d1.set_altitude = 300
+print("The drone's altitude is", d1.get_altitude())

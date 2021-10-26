@@ -43,3 +43,37 @@ bob = EmailPerson ( 'Bob Frapples' , 'bob@frapples.com' )
 
 #In self Defense_________________________________________
 
+class Car():
+    '''parent class'''
+    def exclaim(self):
+        print("I'm a car")
+class Yugo(Car):
+    '''subclass Car'''
+
+    def exclaim(self):
+        print("I'm a Yugo! Much like a Car, but more Yugo-ish." )
+    
+    def need_a_push(self):
+        print("A little help here!")
+    
+    
+a_car = Car()
+
+print(a_car.exclaim())
+
+#Getters and Setters_________________________________________
+
+
+class Duck :
+    def __init__ ( self , input_name ):
+        self . name = input_name
+
+fowl = Duck ( 'Daffy' )
+fowl . name 'Daffy' 
+
+fowl . name = 'Daphne'
+fowl . name 'Daphne' 
+
+
+ 
+
