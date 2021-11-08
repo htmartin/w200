@@ -66,14 +66,37 @@ print(a_car.exclaim())
 
 class Duck :
     def __init__ ( self , input_name ):
-        self . name = input_name
+        self . hidden_name = input_name
+    def get_name(self):
+        print('inside the getter')
+        return self . hidden_name
+    def set_name(self, input_name):
+        print('inside the setter')
+        self.hidden_name = input_name
 
-fowl = Duck ( 'Daffy' )
-fowl . name 'Daffy' 
-
-fowl . name = 'Daphne'
-fowl . name 'Daphne' 
-
+don= Duck('Donald')
+don.get_name()
 
  
+>>> don = Duck ( 'Donald' ) >>> don . get_name () inside the getter 'Donald' >>> don . set_name ( 'Donna' ) inside the setter >>> don . get_name () inside the getter 'Donna'
 
+
+################Property attributes________________________________________________________________________
+class Duck :
+    def __init__ ( self , input_name ):
+        self . hidden_name = input_name
+    @property
+    def name(self):
+        print('inside the getter')
+        return self . hidden_name
+    @name.setter
+    def name(self, input_name):
+        print('inside the setter')
+        self.hidden_name = input_name
+        #name = property(get_name, set_name)
+        
+        
+don= Duck('Donald')
+#don.get_name()
+don.name = 'Donna'
+don.name
