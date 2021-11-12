@@ -171,3 +171,30 @@ print("The drone's altitude is", d1.get_altitude())
 
 d1.set_altitude = 300
 print("The drone's altitude is", d1.get_altitude())
+
+
+#___________7.12 class odds and ends
+
+class Drone:
+    '''rep of a drone aircraft'''
+    
+    num_drones =0
+    
+    
+    def __init__(self,altitude=0):
+        self.altitude = altitude
+        self.ascend_count = 0
+    
+    def fly(self):
+        print ('The drone is flying at an altitude of ', self.altitude, "feet")
+        
+    def ascend(self, change):
+        self.altitude += change
+        self.ascend_count += 1
+        
+        
+d1 = Drone(100)
+print("The drone's altitude is", d1.altitude())
+
+d1.altitude = 300
+print("The drone's altitude is", d1.altitude())

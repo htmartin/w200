@@ -55,30 +55,64 @@ board_dict = {1: 'x', 2: 'o', 3: 3, 4: 'x', 5: 'x', 6: 'o', 7: 'o', 8: 8, 9: 'x'
 #board_dict = {1: 'x', 2: 'o', 3: 3, 4: 'x', 5: 'x', 6: 'o', 7: 'o', 8: 8, 9: 'x'}
 
 
-# add to game while loop- 
-# if board_dict.values() for keys: (1,2,3) or (4,5,6) or (7,8,9) or (1,4,7) or (2,5,8) or (3,6,9) or (1,5,9) or (3,5,7) == 'x' or =='o':
-#         break
 
 
 
-
-# while True:
-#     print('boo')
-if board_dict[1] and board_dict[2] and board_dict[3] == 'x' or board_dict[1] and board_dict[2] and board_dict[3]=='o':
-    print('boh')
-elif board_dict[4] and board_dict[5] and board_dict[6] == 'x' or board_dict[4] and board_dict[5] and board_dict[6]=='o':
-    print('baha')
-elif board_dict[7] and board_dict[8] and board_dict[9] == 'x' or board_dict[7] and board_dict[8] and board_dict[9] =='o':
-    print('bwah')
-elif board_dict[1] and board_dict[4] and board_dict[7] == 'x' or board_dict[1] and board_dict[4] and board_dict[7] =='o':  
-    print('bwahhaha')
-elif board_dict[2] and board_dict[5] and board_dict[8] == 'x' or board_dict[2] and board_dict[5] and board_dict[8] =='o':  
-    print('boohoo')
-elif board_dict[3] and board_dict[6] and board_dict[9] == 'x' or board_dict[3] and board_dict[6] and board_dict[9] =='o':
-    print('woohoo')
-elif board_dict[1] and board_dict[5] and board_dict[9] == 'x' or board_dict[1] and board_dict[5] and board_dict[9] =='o':
-    print('HaHa')
+if board_dict[1] == 'x' and board_dict[2] == 'x' and board_dict[3] == 'x':
+    print('X wins')
+    break
     
+elif board_dict[1] == 'o' and board_dict[2] == 'o' and board_dict[3]=='o':
+    print('O wins')
+    break
+    
+elif board_dict[4]== 'x' and board_dict[5] == 'x' and board_dict[6] == 'x':
+    print('X wins')
+    break
+    
+elif board_dict[4] == 'o' and board_dict[5] == 'o' and board_dict[6]=='o':
+    print('O wins')
+    break
+    
+elif board_dict[7] == 'x' and board_dict[8] == 'x' and board_dict[9] == 'x':
+    print('X wins')
+    break
+    
+elif board_dict[7] == 'o' and board_dict[8] == 'o' and board_dict[9] =='o':
+    print('O wins')
+    break
+    
+elif board_dict[1] == 'x' and board_dict[4] == 'x' and board_dict[7] == 'x':
+    print('X wins')
+    break
+
+elif board_dict[1] == 'o' and board_dict[4] == 'o' and board_dict[7] =='o':  
+    print('O wins')
+    break
+    
+elif board_dict[2] == 'x' and board_dict[5] == 'x' and board_dict[8] == 'x':
+    print('X wins')
+    break
+    
+elif board_dict[2] == 'o' and board_dict[5] == 'o' and board_dict[8] =='o':  
+    print('O wins')
+    break
+    
+elif board_dict[3] == 'x' and board_dict[6] == 'x' and board_dict[9] == 'x':
+    print('X wins')
+    break
+    
+elif board_dict[3] == 'o' and board_dict[6] == 'o' and board_dict[9] =='o':
+    print('O wins')
+    break
+    
+elif board_dict[1] == 'x' and board_dict[5] == 'x' and board_dict[9] == 'x':
+    print('X wins')
+    break
+    
+elif board_dict[1] == 'o' and board_dict[5] =='o' and board_dict[9] =='o':
+    print('O wins')
+    break
     
 # after check simple if then loop(on #(3,6,9)), try-
 # while True:

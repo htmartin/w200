@@ -100,3 +100,18 @@ don= Duck('Donald')
 #don.get_name()
 don.name = 'Donna'
 don.name
+
+###########__________________Properties for Computed Values________________________________
+
+class Circle():
+    def __init__(self, radius):
+        self.radius = radius
+        
+    @property
+    def diameter(self):
+        return 2*self.radius
+    
+c=Circle(5)
+c.radius
+
+#____________________________Name Mangling for Privacy________________________
