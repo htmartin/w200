@@ -176,10 +176,6 @@ print("The drone's altitude is", d1.get_altitude())
 #___________7.12 class odds and ends
 
 class Drone:
-    '''rep of a drone aircraft'''
-    
-    num_drones =0
-    
     
     def __init__(self,altitude=0):
         self.altitude = altitude
@@ -198,3 +194,30 @@ print("The drone's altitude is", d1.altitude())
 
 d1.altitude = 300
 print("The drone's altitude is", d1.altitude())
+
+
+# This works in the video, I get "TypeError: 'int' object is not callable"???
+
+
+#___________7.12 class odds and ends, adding properties
+
+class Drone:
+    
+    def __init__(self,altitude=0):
+        self.__altitude = altitude
+        self.ascend_count = 0
+    
+    def fly(self):
+        print ('The drone is flying at an altitude of ', self.__altitude, "feet")
+        
+    def ascend(self, change):
+        self.__altitude += change
+        self.ascend_count += 1
+        
+    def get_altitude(self):
+        return self.__altitude
+    
+    def set_altitude(self, new_altitude):
+        if new_altitude<0:
+            raise Exception('Drone cannot have a negative altitude.')
+            
